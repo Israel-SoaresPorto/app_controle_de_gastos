@@ -14,7 +14,17 @@
     <!-- SEÇÃO PRINCIPAL -->
     <main class="main__container">
         <section class="main__screen wrapper">
-            
+            <div class="screen__header">
+                <div class="screen__inputs">
+                    <input type="text" id="balance-description" class="screen__form input__description" placeholder="digite uma descrição">
+                    <input type="text" id="balance-value" class=" screen__form input__value" placeholder="valor(em R$)">
+                </div>
+                <select name="balance-select" id="balance-select" class=" screen__form screen__select">
+                    <option value="entry">Entrada</option>
+                    <option value="outflow">Saída</option>
+                </select>
+                <button class="screen__form screen__button" id="balance-input">Enviar</button>
+            </div>
         </section>
     </main>
 </body>

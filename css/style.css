@@ -6,9 +6,14 @@
     box-sizing: border-box;
 }
 
+:root {
+    --primary-color: rgb(105, 245, 105);
+}
+
 body {
     width: 100%;
-    background-color: rgb(105, 245, 105);
+    background-color: var(--primary-color);
+    font-family: "Montserrat", sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -41,4 +46,56 @@ body {
     height: 30em;
     background-color: rgb(255, 255, 255);
     border-radius: 1.5em;
+}
+
+.screen__header {
+    width: 100%;
+    padding: 1.5em;
+    display: flex;
+    justify-content: space-around;
+}
+
+.screen__inputs {
+    display: flex;
+    justify-content: space-around;
+    gap: 1em;
+}
+
+.screen__form {
+    height: 2em;
+    padding: .5em;
+    font-size: 1em;
+    border: 2px solid rgb(1, 129, 1);
+    border-radius: 1em;
+    outline: none;
+}
+
+.screen__form:hover {
+    border-color: var(--primary-color);
+    background-color: rgb(240, 240, 240);
+}
+
+.screen__form:focus {
+    border-color: var(--primary-color);
+    background-color: rgb(240, 240, 240);
+}
+
+.input__description {
+    width: 20em;
+}
+
+.input__value {
+    width: 10em;
+}
+
+.screen__select {
+    width: 8em;
+    background-color: rgb(255, 255, 255);
+    padding: .4em;
+}
+
+.screen__button {
+    width: 5em;
+    background-color: rgb(255, 255, 255);
+    padding: .4em;
 }
