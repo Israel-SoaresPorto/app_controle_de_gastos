@@ -6,8 +6,10 @@
     box-sizing: border-box;
 }
 
+/* VARIÁVEIS CSS */
 :root {
     --primary-color: rgb(105, 245, 105);
+    --border-main-style: 3px solid rgb(0, 0, 0);
 }
 
 body {
@@ -20,6 +22,12 @@ body {
     justify-content: center;
 }
 
+.wrapper {
+    max-width: 60em;
+}
+
+/* CABEÇALHO */
+
 .head {
     padding: 2em;
 }
@@ -29,13 +37,10 @@ body {
     text-align: center;
 }
 
-.wrapper {
-    max-width: 60em;
-}
+/* SEÇAÕ PRINCIPAL */
 
 .main__container {
     width: 100%;
-    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -46,7 +51,10 @@ body {
     height: 30em;
     background-color: rgb(255, 255, 255);
     border-radius: 1.5em;
+    border: var(--border-main-style);
 }
+
+/* TOPO DA SEÇAÕ PRINCIPAL */
 
 .screen__header {
     width: 100%;
@@ -99,3 +107,56 @@ body {
     background-color: rgb(255, 255, 255);
     padding: .4em;
 }
+
+/* MEIO DA SEÇÃO PRINCIPAL */
+
+.screen__values {
+    height: 21em;
+    border-top: var(--border-main-style);
+    border-bottom: var(--border-main-style);
+    display: flex;
+    flex-direction: row;
+}
+
+.screen__balances__container {
+    padding: .5em 2em;
+    flex: 1;
+}
+
+.screen__balances__container:first-child {
+    border-right: var(--border-main-style);
+}
+
+.screen__balances__head {
+    text-align: center;
+    padding:.5em 0 1em;
+}
+
+.screen__balance {
+    padding: 1em;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.balance {
+    background-color: rgb(240, 240, 240);
+    padding: .5em;
+    border-radius: 1em;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap:1em;
+}
+
+.balance__description {
+    flex: 1;
+}
+
+.screen__total-balance {
+    padding: 1em;
+    text-align: center;
+}
+

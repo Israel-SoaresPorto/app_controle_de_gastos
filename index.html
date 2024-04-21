@@ -1,31 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>App Controle de Gastos</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-    <!-- CABECALHO DA PÁGINA -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
     <header class="head">
-        <h1 class="head__title">Controle de Gastos</h1>
+      <h1 class="head__title">Controle de Gastos</h1>
     </header>
-    <!-- SEÇÃO PRINCIPAL -->
     <main class="main__container">
-        <section class="main__screen wrapper">
-            <div class="screen__header">
-                <div class="screen__inputs">
-                    <input type="text" id="balance-description" class="screen__form input__description" placeholder="digite uma descrição">
-                    <input type="text" id="balance-value" class=" screen__form input__value" placeholder="valor(em R$)">
-                </div>
-                <select name="balance-select" id="balance-select" class=" screen__form screen__select">
-                    <option value="entry">Entrada</option>
-                    <option value="outflow">Saída</option>
-                </select>
-                <button class="screen__form screen__button" id="balance-input">Enviar</button>
+      <section class="main__screen wrapper">
+        <div class="screen__header">
+          <div class="screen__inputs">
+            <input
+              type="text"
+              id="balance-description"
+              class="screen__form input__description"
+              placeholder="digite uma descrição"
+            />
+            <input
+              type="text"
+              id="balance-value"
+              class="screen__form input__value"
+              placeholder="valor(em R$)"
+            />
+          </div>
+          <select
+            name="balance-select"
+            id="balance-select"
+            class="screen__form screen__select"
+          >
+            <option value="entry">Entrada</option>
+            <option value="outflow">Saída</option>
+          </select>
+          <button class="screen__form screen__button" id="balance-input">
+            Enviar
+          </button>
+        </div>
+        <div class="screen__values">
+          <div class="screen__balances__container">
+            <div class="screen__balances__head">
+              <h2 class="screen__balances__title">Entradas</h2>
             </div>
-        </section>
+            <div class="screen__balance" id="entry-values">
+              <div class="balance">
+                <p class="balance__description">Lorem, ipsum.</p>
+                <p class="balance__value">R$ 100,00</p>
+              </div>
+              <div class="balance">
+                <p class="balance__description">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                <p class="balance__value">R$ 100,00</p>
+              </div>
+            </div>
+          </div>
+          <div class="screen__balances__container">
+            <div class="screen__balances__head">
+              <h2 class="screen__balances__title">Saídas</h2>
+            </div>
+            <div class="screen__balance" id="outflow-values">
+              <div class="balance">
+                <p class="balance__description">Lorem, ipsum.</p>
+                <p class="balance__value">R$ 100,00</p>
+              </div>
+              <div class="balance">
+                <p class="balance__description">Lorem, ipsum.</p>
+                <p class="balance__value">R$ 100,00</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="screen__total-balance">
+            <h2>Total: R$ <span id="total-balance">100,00</span></h2>
+        </div>
+      </section>
     </main>
-</body>
+  </body>
 </html>
